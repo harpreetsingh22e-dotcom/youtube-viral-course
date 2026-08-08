@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08090d">
+<title>YouTube Viral Course — VIP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07080c; --card:#10121a; --card2:#151824; --text:#f7f8fb; --muted:#9da4b5;
+  --line:rgba(255,255,255,.09); --gold:#ffd34d; --gold2:#ff9d2e;
+  --green:#32e38a; --blue:#6ea8ff; --danger:#ff5c7a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--text); background:
+  radial-gradient(circle at 15% 0%,rgba(255,190,45,.14),transparent 30%),
+  radial-gradient(circle at 90% 10%,rgba(89,111,255,.14),transparent 28%),var(--bg);
+  font-family:Inter,system-ui,sans-serif;
+}
+button,a{font:inherit}
+a{text-decoration:none;color:inherit}
+.container{width:min(1080px,92%);margin:auto}
+.topbar{
+  position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);
+  background:rgba(7,8,12,.72);border-bottom:1px solid var(--line)
+}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:"Space Grotesk";font-weight:700;font-size:20px}
+.logo span{color:var(--gold)}
+.badge{font-size:11px;font-weight:800;letter-spacing:.12em;padding:7px 10px;border:1px solid rgba(255,211,77,.28);border-radius:999px;color:var(--gold);background:rgba(255,211,77,.07)}
+.hero{padding:68px 0 30px;text-align:center}
+.eyebrow{color:var(--gold);font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+h1,h2,h3{font-family:"Space Grotesk";margin:0}
+h1{font-size:clamp(42px,8vw,78px);line-height:.95;letter-spacing:-.055em;margin:14px auto 18px;max-width:850px}
+.gradient{background:linear-gradient(100deg,#fff 15%,#ffd34d 52%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);font-size:16px;line-height:1.65;max-width:690px;margin:0 auto}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px 0 12px}
+.btn{
+  border:0;border-radius:14px;padding:14px 20px;font-weight:800;cursor:pointer;transition:.2s;
+}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111}
+.secondary{background:rgba(255,255,255,.06);border:1px solid var(--line);color:#fff}
+.price{font-size:13px;color:var(--muted);margin-top:8px}.price b{color:#fff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.stat{padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035)}
+.stat b{display:block;font-size:22px;font-family:"Space Grotesk"}.stat span{font-size:12px;color:var(--muted)}
+.tabs-wrap{position:sticky;top:70px;z-index:40;padding:10px 0;background:rgba(7,8,12,.72);backdrop-filter:blur(18px)}
+.tabs{display:flex;gap:8px;overflow:auto;padding-bottom:2px}
+.tab{white-space:nowrap;background:rgba(255,255,255,.05);color:#b8bfce;border:1px solid var(--line);padding:11px 15px;border-radius:12px;cursor:pointer;font-weight:700}
+.tab.active{background:#fff;color:#0a0b0f;border-color:#fff}
+.section{padding:48px 0}.section-head{margin-bottom:20px}
+.section-head p{color:var(--muted);line-height:1.6;margin:8px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
+  border:1px solid var(--line);border-radius:20px;padding:20px;
+  box-shadow:0 16px 50px rgba(0,0,0,.16)
+}
+.icon{font-size:28px;margin-bottom:15px}.card h3{font-size:18px}.card p{color:var(--muted);font-size:13px;line-height:1.65}
+.lock{display:inline-flex;margin-top:8px;font-size:11px;color:#c9ced9;border:1px solid var(--line);padding:6px 8px;border-radius:999px}
+.offer{
+  display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch;
+  background:linear-gradient(135deg,rgba(255,211,77,.12),rgba(255,255,255,.035));
+  border:1px solid rgba(255,211,77,.2);border-radius:26px;padding:24px
+}
+.offer-price{font-family:"Space Grotesk";font-size:52px;font-weight:700}.offer-price small{font-size:14px;color:var(--muted)}
+.list{padding:0;margin:18px 0;list-style:none}.list li{margin:10px 0;color:#d8dce5;font-size:14px}.list li:before{content:"✓";color:var(--green);font-weight:900;margin-right:9px}
+.qrbox{background:#fff;border-radius:20px;padding:16px;color:#111;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:260px}
+.qrbox img{width:min(220px,80%);aspect-ratio:1;object-fit:contain;border-radius:10px}.qrbox p{margin:8px 0 0;font-size:12px;font-weight:700}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.step{position:relative}.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#111;font-weight:900;margin-bottom:12px}
+.video-card{display:flex;align-items:center;gap:14px}.play{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-size:18px}
+.faq details{border-bottom:1px solid var(--line);padding:17px 0}.faq summary{cursor:pointer;font-weight:700}.faq p{color:var(--muted);line-height:1.65;font-size:14px}
+.cta{text-align:center;padding:48px 20px;border-radius:26px;background:linear-gradient(135deg,#161924,#0e1017);border:1px solid var(--line)}
+.footer{padding:40px 0 55px;color:#7f8798;font-size:12px;text-align:center}
+.hidden{display:none!important}
+@media(max-width:760px){
+  .nav{height:62px}.tabs-wrap{top:62px}
+  .hero{padding-top:48px}.stats,.grid,.flow,.offer{grid-template-columns:1fr}
+  .offer-price{font-size:44px}.section{padding:36px 0}
+  h1{font-size:48px}.sub{font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <div class="logo">YouTube <span>VIRAL</span></div>
+    <div class="badge">VIP COURSE</div>
+  </div>
+</header>
+
+<main>
+<section class="hero container">
+  <div class="eyebrow">Creator Growth System</div>
+  <h1>Make Videos That <span class="gradient">Get Views.</span></h1>
+  <p class="sub">A practical YouTube course covering viral ideas, titles, thumbnails, retention, Shorts strategy and a repeatable upload system.</p>
+  <div class="hero-actions">
+    <button class="btn primary" onclick="showTab('buy')">Get VIP Access — ₹199</button>
+    <button class="btn secondary" onclick="document.getElementById('content').scrollIntoView()">View Course</button>
+  </div>
+  <div class="price">One-time access • <b>₹199</b> • Mobile friendly</div>
+  <div class="stats">
+    <div class="stat"><b>10+</b><span>Practical modules</span></div>
+    <div class="stat"><b>VIP</b><span>Private learning flow</span></div>
+    <div class="stat"><b>24/7</b><span>Self-paced access</span></div>
+  </div>
+</section>
+
+<div class="tabs-wrap">
+  <div class="container tabs">
+    <button class="tab active" data-tab="content">📚 Course</button>
+    <button class="tab" data-tab="buy">💳 Buy VIP</button>
+    <button class="tab" data-tab="bonus">🎁 Bonuses</button>
+    <button class="tab" data-tab="support">💬 Support</button>
+  </div>
+</div>
+
+<section id="content" class="section container panel">
+  <div class="section-head"><h2>VIP Course Modules</h2><p>Clear, action-focused lessons so you can apply the strategy instead of only watching theory.</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">🔥</div><h3>Module 01 — Viral Ideas</h3><p>Find strong topics, angles and hooks that make viewers stop scrolling.</p><span class="lock">VIP</span></article>
+    <article class="card"><div class="icon">🎯</div><h3>Module 02 — Titles</h3><p>Build curiosity-driven titles without making misleading promises.</p><span class="lock">VIP</span></article>
+    <article class="card"><div class="icon">🖼️</div><h3>Module 03 — Thumbnails</h3><p>Simple thumbnail principles for clarity, contrast and clicks.</p><span class="lock">VIP</span></article>
+    <article class="card"><div class="icon">⏱️</div><h3>Module 04 — Retention</h3><p>Structure the opening and pacing so viewers have a reason to continue.</p><span class="lock">VIP</span></article>
+    <article class="card"><div class="icon">📱</div><h3>Module 05 — Shorts</h3><p>Hooks, pacing and repeatable formats for short-form content.</p><span class="lock">VIP</span></article>
+    <article class="card"><div class="icon">📈</div><h3>Module 06 — Analytics</h3><p>Read CTR, retention and traffic sources to improve the next upload.</p><span class="lock">VIP</span></article>
+  </div>
+</section>
+
+<section id="buy" class="section container panel hidden">
+  <div class="offer">
+    <div>
+      <div class="eyebrow">VIP ACCESS</div>
+      <h2 style="font-size:34px;margin-top:8px">YouTube Viral Course</h2>
+      <div class="offer-price">₹199 <small>one-time</small></div>
+      <ul class="list">
+        <li>Complete viral YouTube learning roadmap</li>
+        <li>Titles + thumbnails + retention strategy</li>
+        <li>Shorts growth workflow</li>
+        <li>Bonus creator resources</li>
+        <li>Private Telegram access after payment</li>
+      </ul>
+      <a class="btn primary" href="#payment">Pay ₹199 & Unlock</a>
+      <p style="color:var(--muted);font-size:11px;line-height:1.5">Payment is handled outside this static page. Do not enter card/UPI credentials here.</p>
+    </div>
+    <div id="payment" class="qrbox">
+      <!-- Replace qr.png with your actual PhonePe/UPI QR image -->
+      <img src="qr.png" alt="Payment QR" onerror="this.style.display='none';document.getElementById('qrFallback').style.display='block'">
+      <div id="qrFallback" style="display:none">
+        <div style="font-size:42px">▣</div>
+        <b>Add your QR</b>
+        <p>Upload your payment QR as <strong>qr.png</strong> in the same GitHub folder.</p>
+      </div>
+      <p>Scan to pay ₹199</p>
+    </div>
+  </div>
+
+  <div class="section" style="padding-bottom:0">
+    <div class="flow">
+      <div class="card step"><div class="num">1</div><h3>Pay ₹199</h3><p>Scan the QR and complete the payment in your UPI app.</p></div>
+      <div class="card step"><div class="num">2</div><h3>Keep proof</h3><p>Save the payment screenshot/transaction reference for support.</p></div>
+      <div class="card step"><div class="num">3</div><h3>Join VIP</h3><p>Use the private Telegram invite below after payment.</p></div>
+    </div>
+  </div>
+
+  <div class="cta" style="margin-top:18px">
+    <h2>Payment done?</h2>
+    <p style="color:var(--muted);line-height:1.6">Join the private Telegram channel and follow the pinned instructions.</p>
+    <a class="btn primary" href="https://t.me/+Mklrg6kreX85NGY1" target="_blank" rel="noopener">🚀 Join VIP Telegram</a>
+  </div>
+</section>
+
+<section id="bonus" class="section container panel hidden">
+  <div class="section-head"><h2>VIP Bonuses</h2><p>Extra resources to speed up your workflow.</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">⚡</div><h3>Hook Formula Pack</h3><p>Reusable opening structures for videos and Shorts.</p></article>
+    <article class="card"><div class="icon">🧠</div><h3>Idea Checklist</h3><p>A quick checklist to score an idea before spending time editing.</p></article>
+    <article class="card"><div class="icon">📝</div><h3>Upload Checklist</h3><p>Title, thumbnail, description and publishing checks in one place.</p></article>
+  </div>
+</section>
+
+<section id="support" class="section container panel hidden">
+  <div class="cta">
+    <h2>Need Help?</h2>
+    <p style="color:var(--muted);line-height:1.6">For payment/access issues, contact support through your Telegram channel and keep your transaction reference ready.</p>
+    <a class="btn secondary" href="https://t.me/+Mklrg6kreX85NGY1" target="_blank" rel="noopener">Open Telegram</a>
+  </div>
+</section>
+
+<section class="section container faq">
+  <div class="section-head"><h2>FAQ</h2></div>
+  <details><summary>Is this a one-time payment?</summary><p>Yes, the page presents VIP access as a one-time ₹199 purchase.</p></details>
+  <details><summary>How do I get the private channel?</summary><p>After payment, use the VIP Telegram button in the Buy VIP section.</p></details>
+  <details><summary>Can GitHub Pages verify payments automatically?</summary><p>No. GitHub Pages is static hosting, so secure payment verification needs a separate backend/payment system. This page should not be treated as automatic payment verification.</p></details>
+</section>
+</main>
+
+<footer class="footer">
+  © 2026 YouTube Viral Course • Built for GitHub Pages
+</footer>
+
+<script>
+const tabs=[...document.querySelectorAll('.tab')];
+const panels=[...document.querySelectorAll('.panel')];
+function showTab(id){
+  panels.forEach(p=>p.classList.toggle('hidden',p.id!==id));
+  tabs.forEach(t=>t.classList.toggle('active',t.dataset.tab===id));
+  document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
+</script>
+</body>
+</html>
