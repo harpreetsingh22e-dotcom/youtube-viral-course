@@ -6,117 +6,659 @@
 
 <title>YouTube Viral Course | VIP Course</title>
 
+<meta name="description" content="Learn YouTube growth, video strategy, thumbnails, Shorts and audience building.">
+
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial,sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-  background:#070711;
-  color:white;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#050509;
+  color:#fff;
   overflow-x:hidden;
 }
 
-.hero{
-  min-height:100vh;
-  padding:50px 20px;
-  text-align:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:
-  radial-gradient(circle at top,#401080 0%,#0b0715 45%,#050509 100%);
+body:before{
+  content:"";
+  position:fixed;
+  width:350px;
+  height:350px;
+  background:#7c3aed;
+  filter:blur(140px);
+  opacity:.20;
+  top:-100px;
+  left:-100px;
+  z-index:-1;
+}
+
+body:after{
+  content:"";
+  position:fixed;
+  width:350px;
+  height:350px;
+  background:#00e5ff;
+  filter:blur(150px);
+  opacity:.12;
+  right:-120px;
+  bottom:-100px;
+  z-index:-1;
 }
 
 .container{
-  width:100%;
-  max-width:850px;
+  width:92%;
+  max-width:1050px;
+  margin:auto;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 15px;
+  background:
+    radial-gradient(circle at top,#171329 0%,#080810 45%,#050509 100%);
 }
 
 .badge{
   display:inline-block;
   padding:9px 18px;
-  border:1px solid #a855f7;
+  border:1px solid rgba(255,255,255,.18);
   border-radius:50px;
-  color:#d8b4fe;
-  background:#7c3aed22;
-  margin-bottom:20px;
+  background:rgba(255,255,255,.07);
+  color:#a5f3fc;
+  font-size:13px;
   font-weight:bold;
+  letter-spacing:.5px;
+  margin-bottom:22px;
+  box-shadow:0 0 25px rgba(0,229,255,.12);
 }
 
 h1{
-  font-size:48px;
-  line-height:1.1;
-  margin-bottom:18px;
+  font-size:clamp(40px,9vw,78px);
+  line-height:1.02;
+  margin-bottom:20px;
+  font-weight:900;
 }
 
 .gradient{
-  background:linear-gradient(90deg,#a855f7,#ec4899,#facc15);
+  background:linear-gradient(90deg,#00e5ff,#8b5cf6,#ff2d75);
   -webkit-background-clip:text;
+  background-clip:text;
   color:transparent;
 }
 
-.subtitle{
-  color:#c9c9d4;
+.hero p{
+  max-width:680px;
+  margin:auto;
+  color:#b8b8c8;
   font-size:18px;
-  line-height:1.6;
-  margin-bottom:30px;
+  line-height:1.7;
 }
 
+.cta{
+  display:inline-block;
+  margin-top:30px;
+  padding:17px 30px;
+  border-radius:14px;
+  text-decoration:none;
+  color:white;
+  font-weight:900;
+  font-size:17px;
+  background:linear-gradient(135deg,#7c3aed,#ec4899);
+  box-shadow:0 12px 35px rgba(124,58,237,.35);
+  transition:.25s;
+}
+
+.cta:hover{
+  transform:translateY(-3px);
+}
+
+.small-note{
+  margin-top:14px;
+  color:#777788;
+  font-size:12px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:80px 0;
+}
+
+.section-title{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:12px;
+}
+
+.section-subtitle{
+  text-align:center;
+  color:#90909e;
+  margin-bottom:38px;
+}
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  padding:25px;
+  border:1px solid rgba(255,255,255,.09);
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.025)
+  );
+  border-radius:22px;
+  box-shadow:0 15px 50px rgba(0,0,0,.25);
+  backdrop-filter:blur(15px);
+}
+
+.icon{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  font-size:19px;
+  margin-bottom:9px;
+}
+
+.card p{
+  color:#9999a8;
+  line-height:1.6;
+  font-size:14px;
+}
+
+/* COURSE */
+
+.course-list{
+  max-width:800px;
+  margin:auto;
+}
+
+.lesson{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:18px;
+  margin-bottom:12px;
+  border-radius:16px;
+  background:#0d0d15;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.check{
+  width:34px;
+  height:34px;
+  min-width:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:linear-gradient(135deg,#7c3aed,#ec4899);
+}
+
+.lesson span{
+  color:#ddd;
+}
+
+/* PRICE */
+
 .price-box{
-  background:rgba(255,255,255,.07);
-  border:1px solid #ffffff18;
-  border-radius:25px;
-  padding:30px;
   max-width:500px;
   margin:auto;
-  box-shadow:0 20px 60px #0008;
+  padding:35px 25px;
+  text-align:center;
+  border-radius:28px;
+  background:
+    linear-gradient(145deg,rgba(124,58,237,.18),rgba(236,72,153,.08));
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 20px 70px rgba(0,0,0,.35);
 }
 
 .old-price{
-  color:#888;
+  color:#777;
   text-decoration:line-through;
   font-size:20px;
 }
 
 .price{
-  font-size:55px;
+  font-size:62px;
   font-weight:900;
-  color:#facc15;
-  margin:5px 0 15px;
+  margin:8px 0;
+  background:linear-gradient(90deg,#00e5ff,#a78bfa,#ff4d91);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 
-.buy-btn{
-  display:block;
-  text-decoration:none;
-  color:white;
-  font-weight:bold;
-  font-size:20px;
-  padding:17px;
-  border-radius:15px;
-  background:linear-gradient(90deg,#7c3aed,#ec4899);
-  box-shadow:0 10px 30px #9333ea66;
-  margin-top:20px;
+.price-note{
+  color:#aaa;
+  font-size:13px;
 }
 
-.buy-btn:active{
-  transform:scale(.97);
-}
+/* QR */
 
-section{
-  padding:60px 20px;
-}
-
-.section-title{
-  text-align:center;
-  font-size:32px;
-  margin-bottom:35px;
-}
-
-.cards{
-  max-width:900px;
+.qr-box{
+  max-width:420px;
   margin:auto;
-  display
+  padding:25px;
+  text-align:center;
+  border-radius:25px;
+  background:#fff;
+  color:#111;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+
+.qr-box img{
+  display:block;
+  width:100%;
+  max-width:290px;
+  margin:10px auto 20px;
+  border-radius:15px;
+}
+
+.qr-box h3{
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+.qr-box p{
+  color:#555;
+  font-size:14px;
+  line-height:1.5;
+}
+
+/* STEPS */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.step{
+  text-align:center;
+  padding:25px;
+  border-radius:20px;
+  background:#0c0c13;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.number{
+  width:45px;
+  height:45px;
+  margin:0 auto 15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-weight:bold;
+  background:linear-gradient(135deg,#7c3aed,#ec4899);
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  display:block;
+  max-width:500px;
+  margin:30px auto 0;
+  padding:17px;
+  border-radius:14px;
+  background:#20c76b;
+  color:white;
+  text-decoration:none;
+  text-align:center;
+  font-weight:900;
+  box-shadow:0 12px 35px rgba(32,199,107,.2);
+}
+
+footer{
+  padding:35px 15px;
+  text-align:center;
+  color:#666675;
+  border-top:1px solid rgba(255,255,255,.06);
+  font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+  .hero{
+    min-height:90vh;
+    padding-top:50px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  section{
+    padding:60px 0;
+  }
+
+  .grid,
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .section-title{
+    font-size:29px;
+  }
+
+  .price{
+    font-size:54px;
+  }
+
+  .card{
+    padding:22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<header class="hero">
+  <div class="container">
+
+    <div class="badge">🔥 LIMITED VIP COURSE • START TODAY</div>
+
+    <h1>
+      YouTube
+      <span class="gradient">Viral Course</span>
+    </h1>
+
+    <p>
+      Learn practical YouTube strategies for better videos,
+      thumbnails, Shorts, audience growth and channel improvement.
+    </p>
+
+    <a href="#buy" class="cta">
+      🚀 GET THE COURSE
+    </a>
+
+    <div class="small-note">
+      Beginner friendly • Mobile friendly • Step-by-step learning
+    </div>
+
+  </div>
+</header>
+
+
+<!-- BENEFITS -->
+
+<section>
+  <div class="container">
+
+    <h2 class="section-title">What You'll Learn</h2>
+    <p class="section-subtitle">
+      Simple concepts designed for creators
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>Content Strategy</h3>
+        <p>
+          Learn how to choose useful video topics and plan
+          content consistently.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔥</div>
+        <h3>Viral Concepts</h3>
+        <p>
+          Understand hooks, retention and packaging techniques
+          that can improve video performance.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🖼️</div>
+        <h3>Thumbnail & Title</h3>
+        <p>
+          Learn the basics of creating attractive thumbnails
+          and clickable but honest titles.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>YouTube Shorts</h3>
+        <p>
+          Learn Shorts ideas, structure and posting strategies
+          for your channel.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Channel Growth</h3>
+        <p>
+          Understand audience retention, consistency and
+          basic channel analytics.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💡</div>
+        <h3>Creator Mindset</h3>
+        <p>
+          Build a practical workflow so you can keep creating
+          without getting confused.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- COURSE MODULES -->
+
+<section>
+  <div class="container">
+
+    <h2 class="section-title">📚 Course Modules</h2>
+    <p class="section-subtitle">
+      Step-by-step learning roadmap
+    </p>
+
+    <div class="course-list">
+
+      <div class="lesson">
+        <div class="check">✓</div>
+        <span>01 — YouTube Channel Setup</span>
+      </div>
+
+      <div class="lesson">
+        <div class="check">✓</div>
+        <span>02 — Content & Niche Strategy</span>
+      </div>
+
+      <div class="lesson">
+        <div class="check">✓</div>
+        <span>03 — Viral Video Ideas</span>
+      </div>
+
+      <div class="lesson">
+        <div class="check">✓</div>
+        <span>04 — Thumbnail & Title Strategy</span>
+      </div>
+
+      <div class="lesson">
+        <div class="check">✓</div>
+        <span>05 — Shorts Growth Basics</span>
+      </div>
+
+      <div class="lesson">
+        <div class="check">✓</div>
+        <span>06 — Analytics & Audience Retention</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PRICE -->
+
+<section id="buy">
+  <div class="container">
+
+    <h2 class="section-title">🔥 Get Started Today</h2>
+
+    <div class="price-box">
+
+      <div class="old-price">₹499</div>
+
+      <div class="price">₹199</div>
+
+      <div class="price-note">
+        One-time course access
+      </div>
+
+      <a href="#payment" class="cta">
+        💎 BUY NOW — ₹199
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PAYMENT -->
+
+<section id="payment">
+  <div class="container">
+
+    <h2 class="section-title">📲 Make Payment</h2>
+
+    <p class="section-subtitle">
+      Scan the QR code to complete your payment
+    </p>
+
+    <div class="qr-box">
+
+      <h3>Scan & Pay ₹199</h3>
+
+      <!-- YOUR EXISTING QR IMAGE -->
+      <img
+        src="phonepe_scanner_website.png"
+        alt="Payment QR Code"
+      >
+
+      <p>
+        After payment, send your payment screenshot
+        on WhatsApp for course access.
+      </p>
+
+    </div>
+
+    <!-- CHANGE YOUR NUMBER HERE -->
+    <a
+      class="whatsapp"
+      href="https://wa.me/YOUR_NUMBER_HERE?text=Hello%2C%20I%20have%20paid%20%E2%82%B9199%20for%20the%20YouTube%20Viral%20Course."
+      target="_blank"
+    >
+      💬 SEND PAYMENT SCREENSHOT ON WHATSAPP
+    </a>
+
+  </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section>
+  <div class="container">
+
+    <h2 class="section-title">⚡ How It Works</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="number">1</div>
+        <h3>Pay ₹199</h3>
+        <p>Scan the QR code and complete the payment.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">2</div>
+        <h3>Send Screenshot</h3>
+        <p>Send your payment screenshot on WhatsApp.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">3</div>
+        <h3>Get Access</h3>
+        <p>Receive the course access details after verification.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section>
+  <div class="container">
+
+    <div class="price-box">
+
+      <div class="badge">🚀 START LEARNING</div>
+
+      <h2>
+        Ready to Grow Your<br>
+        <span class="gradient">YouTube Channel?</span>
+      </h2>
+
+      <p style="color:#999;margin-top:15px;line-height:1.6;">
+        Start learning today and build your YouTube skills
+        step by step.
+      </p>
+
+      <a href="#payment" class="cta">
+        🔥 GET ACCESS FOR ₹199
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  © 2026 YouTube Viral Course • All Rights Reserved
+</footer>
+
+
+</body>
+</html>
