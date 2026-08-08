@@ -58,25 +58,68 @@ h1{font-size:34px;margin:15px 0 8px}
 .footer{text-align:center;color:#888;padding:25px 0;font-size:13px}
 </style>
 </head>
-<body>
-<div class="wrap">
+  <style>
+.hidden{
+  display:none !important;
+}
 
-  <section class="hero">
-    <span class="badge">🔥 LIMITED OFFER</span>
-    <h1>🎬 YouTube Viral Course</h1>
-    <p class="sub">YouTube growth, content strategy aur practical tips ek hi course mein.</p>
-  </section>
-
+.buy-btn{
+  display:block;
+  width:100%;
   <section class="card" id="payment">
-    <div class="title">💳 Payment</div>
-    <div class="price">₹199</div>
 
-    <div class="note">
-      Payment complete karne ke baad <b>proof zaroor save karein</b>.
-    </div>
+  <div class="title">💳 Payment</div>
+
+  <div class="price">₹199</div>
+
+  <div class="note">
+    Payment complete karne ke baad proof zaroor save karein.
+  </div>
+
+  <button class="buy-btn" onclick="showQR()">
+    🛒 BUY COURSE - ₹199
+  </button>
+
+  <div id="qrSection" class="hidden">
 
     <p style="text-align:center;font-size:18px;margin:22px 0 10px;">
       👇 Apna payment QR yahan scan karein 👇
+    </p>
+
+    <div class="qr-box">
+      <img src="phonepe_scanner_website.png" alt="PhonePe Payment QR">
+    </div>
+
+    <div class="number">
+      📱 Payment Number: <span>9877459503</span>
+    </div>
+
+    <button class="buy-btn" onclick="showContent()">
+      ✅ PAYMENT DONE — ACCESS COURSE
+    </button>
+
+  </div>
+
+</section>
+
+<section id="courseContent" class="card hidden">
+
+  <div class="title">🎓 Course Content</div>
+
+  <div class="features">
+    <div class="feature">🎬 YouTube Channel Setup</div>
+    <div class="feature">🎯 Niche Selection</div>
+    <div class="feature">💡 Video Ideas Finding</div>
+    <div class="feature">📝 Script Writing</div>
+    <div class="feature">🎥 Video Recording Tips</div>
+    <div class="feature">✂️ Editing for Retention</div>
+    <div class="feature">🔍 SEO & Keywords</div>
+    <div class="feature">🖼️ Thumbnails & Titles</div>
+    <div class="feature">📤 Upload & Publish</div>
+    <div class="feature">🚀 Growth Strategy</div>
+  </div>
+
+</section>
     </p>
 
     <div class="qr-box">
@@ -110,5 +153,20 @@ h1{font-size:34px;margin:15px 0 8px}
 
   <div class="footer">© 2026 YouTube Viral Course</div>
 </div>
+  <script>
+function showQR() {
+  document.getElementById("qrSection").classList.remove("hidden");
+  document.getElementById("qrSection").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function showContent() {
+  document.getElementById("courseContent").classList.remove("hidden");
+  document.getElementById("courseContent").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
 </body>
 </html>
