@@ -154,6 +154,22 @@ h1{font-size:clamp(42px,8vw,78px);line-height:.95;letter-spacing:-.055em;margin:
   <img src="qr.png" alt="Payment QR">
   <p>Scan to pay ₹199</p>
     </div>
+      <div class="payment-proof">
+  <h3>📸 Payment Proof</h3>
+  <p>Payment complete karne ke baad apna payment screenshot upload karein.</p>
+
+  <label for="paymentScreenshot">Payment Screenshot</label>
+  <input type="file" id="paymentScreenshot" accept="image/*">
+
+  <label for="utr">UTR / Transaction ID</label>
+  <input type="text" id="utr" placeholder="Enter UTR / Transaction ID">
+
+  <button class="btn primary" type="button" onclick="submitProof()">
+    Submit Payment Proof
+  </button>
+
+  <p id="proofMsg" style="margin-top:12px;color:#22c55e;"></p>
+      </div>
   </div>
 
   <div class="section" style="padding-bottom:0">
