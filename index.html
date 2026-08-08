@@ -150,16 +150,9 @@ h1{font-size:clamp(42px,8vw,78px);line-height:.95;letter-spacing:-.055em;margin:
       </ul>
       <a class="btn primary" href="#payment">Pay ₹199 & Unlock</a>
       <p style="color:var(--muted);font-size:11px;line-height:1.5">Payment is handled outside this static page. Do not enter card/UPI credentials here.</p>
-    </div>
     <div id="payment" class="qrbox">
-      <!-- Replace qr.png with your actual PhonePe/UPI QR image -->
-      <img src="qr.png" alt="Payment QR" onerror="this.style.display='none';document.getElementById('qrFallback').style.display='block'">
-      <div id="qrFallback" style="display:none">
-        <div style="font-size:42px">▣</div>
-        <b>Add your QR</b>
-        <p>Upload your payment QR as <strong>qr.png</strong> in the same GitHub folder.</p>
-      </div>
-      <p>Scan to pay ₹199</p>
+  <img src="qr.png" alt="Payment QR">
+  <p>Scan to pay ₹199</p>
     </div>
   </div>
 
