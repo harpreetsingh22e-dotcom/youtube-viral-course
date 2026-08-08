@@ -3,92 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07070b">
-<title>YouTube Viral Course — ₹199</title>
+
+<title>YouTube Viral Course | VIP Course</title>
+
 <style>
-:root{--bg:#07070b;--card:#11121a;--gold:#ffd166;--purple:#8b5cf6;--text:#f7f7fb;--muted:#a9a9b7}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 50% -10%,#33205f 0,#100c1d 30%,#07070b 65%);color:var(--text)}
-.container{width:min(1080px,92%);margin:auto}
-nav{position:sticky;top:0;z-index:10;background:rgba(7,7,11,.78);backdrop-filter:blur(14px);border-bottom:1px solid #272733}
-.navin{height:64px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:900;letter-spacing:.5px}.logo span{color:var(--gold)}
-.btn{display:inline-block;text-decoration:none;border:0;border-radius:14px;padding:13px 20px;font-weight:800;cursor:pointer}
-.btn-gold{background:linear-gradient(135deg,#ffe08a,#ffb703);color:#15110a;box-shadow:0 10px 30px #ffb7032b}
-.hero{text-align:center;padding:72px 0 48px}
-.badge{display:inline-block;padding:8px 13px;border:1px solid #8b5cf655;background:#8b5cf614;color:#d8c8ff;border-radius:999px;font-size:13px;font-weight:800}
-h1{font-size:clamp(40px,8vw,78px);line-height:.98;margin:18px 0 18px;letter-spacing:-3px}
-h1 span{background:linear-gradient(90deg,#fff,#d7c5ff,#ffd166);-webkit-background-clip:text;color:transparent}
-.hero p{max-width:680px;margin:0 auto 28px;color:var(--muted);font-size:18px;line-height:1.65}
-.price{font-size:42px;font-weight:950;color:var(--gold);margin:12px}.old{text-decoration:line-through;color:#777;font-size:18px;margin-left:8px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0 70px}
-.card{background:linear-gradient(180deg,#151620,#0d0e14);border:1px solid #282a38;border-radius:22px;padding:24px;box-shadow:0 18px 50px #0007}
-.card h3{margin:10px 0 8px}.card p{color:var(--muted);line-height:1.55;margin:0}.icon{font-size:30px}
-.section{padding:40px 0}.section h2{text-align:center;font-size:34px;margin-bottom:28px}
-.pay{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-.qrbox{background:#fff;border-radius:24px;padding:14px;max-width:430px;margin:auto;box-shadow:0 20px 70px #0008}
-.qrbox img{display:block;width:100%;height:auto;border-radius:12px}
-.payinfo{padding:28px}.payinfo ul{padding-left:20px;color:#c7c7d1;line-height:2}
-.notice{border:1px solid #ffd16655;background:#ffd1660d;border-radius:16px;padding:16px;color:#e8e1cd;margin:20px 0}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step b{font-size:34px;color:var(--gold)}
-.cta{text-align:center;margin:60px 0;padding:44px 20px;border-radius:28px;background:linear-gradient(135deg,#251448,#11121a);border:1px solid #8b5cf655}
-footer{text-align:center;color:#777;padding:28px;border-top:1px solid #20212b;font-size:13px}
-@media(max-width:760px){.grid,.steps,.pay{grid-template-columns:1fr}.hero{padding-top:50px}h1{letter-spacing:-2px}.navin .btn{padding:10px 13px;font-size:13px}.payinfo{padding:10px}.qrbox{max-width:340px}}
-</style>
-</head>
-<body>
-<nav><div class="container navin"><div class="logo">YT <span>VIRAL COURSE</span></div><a class="btn btn-gold" href="#payment">BUY ₹199</a></div></nav>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
 
-<header class="hero container">
-  <div class="badge">🔥 PREMIUM YOUTUBE LEARNING COURSE</div>
-  <h1>Turn Your YouTube<br><span>Into a Growth Machine.</span></h1>
-  <p>Learn practical YouTube strategies, content planning, thumbnails, titles and growth techniques in one simple course.</p>
-  <div class="price">₹199 <span class="old">₹499</span></div>
-  <a class="btn btn-gold" href="#payment">GET ACCESS NOW →</a>
-</header>
+body{
+  background:#070711;
+  color:white;
+  overflow-x:hidden;
+}
 
-<section class="container">
-  <div class="grid">
-    <div class="card"><div class="icon">🚀</div><h3>Growth Strategy</h3><p>Understand the basics of building a consistent YouTube growth plan.</p></div>
-    <div class="card"><div class="icon">🎯</div><h3>Content Ideas</h3><p>Plan stronger topics, hooks and formats for your target audience.</p></div>
-    <div class="card"><div class="icon">📈</div><h3>Optimization</h3><p>Improve titles, thumbnails and video structure for better discovery.</p></div>
-  </div>
-</section>
+.hero{
+  min-height:100vh;
+  padding:50px 20px;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+  radial-gradient(circle at top,#401080 0%,#0b0715 45%,#050509 100%);
+}
 
-<section class="section container" id="payment">
-  <h2>Secure Your Course Access</h2>
-  <div class="pay">
-    <div class="qrbox"><img src="payment-qr.png" alt="PhonePe payment QR code"></div>
-    <div class="payinfo">
-      <div class="badge">PAYMENT • ₹199</div>
-      <h2 style="text-align:left;margin-bottom:10px">Scan & Pay</h2>
-      <p style="color:var(--muted);line-height:1.6">Open your payment app, scan the QR code and complete the ₹199 payment.</p>
-      <ul>
-        <li>✔️ Course price: ₹199</li>
-        <li>✔️ PhonePe QR payment</li>
-        <li>✔️ Keep your payment screenshot</li>
-      </ul>
-      <div class="notice"><b>After payment:</b> Send your payment screenshot to the course seller to receive access.</div>
-      <a class="btn btn-gold" href="https://wa.me/919877459503?text=Hi%2C%20I%20have%20paid%20₹199%20for%20the%20YouTube%20Viral%20Course.%20Please%20send%20me%20access." target="_blank">SEND PAYMENT PROOF →</a>
-    </div>
-  </div>
-</section>
+.container{
+  width:100%;
+  max-width:850px;
+}
 
-<section class="section container">
-  <h2>How It Works</h2>
-  <div class="steps">
-    <div class="card step"><b>01</b><h3>Scan</h3><p>Scan the QR code with your payment app.</p></div>
-    <div class="card step"><b>02</b><h3>Pay ₹199</h3><p>Complete the payment and save the receipt.</p></div>
-    <div class="card step"><b>03</b><h3>Get Access</h3><p>Send proof and receive your course access details.</p></div>
-  </div>
-</section>
+.badge{
+  display:inline-block;
+  padding:9px 18px;
+  border:1px solid #a855f7;
+  border-radius:50px;
+  color:#d8b4fe;
+  background:#7c3aed22;
+  margin-bottom:20px;
+  font-weight:bold;
+}
 
-<section class="container cta">
-  <h2 style="margin:0 0 12px">Ready to Learn YouTube Growth?</h2>
-  <p style="color:var(--muted);margin:0 0 22px">Start your learning journey today for ₹199.</p>
-  <a class="btn btn-gold" href="#payment">BUY COURSE — ₹199</a>
-</section>
+h1{
+  font-size:48px;
+  line-height:1.1;
+  margin-bottom:18px;
+}
 
-<footer>© 2026 YouTube Viral Course • All rights reserved.</footer>
-</body>
-</html>
+.gradient{
+  background:linear-gradient(90deg,#a855f7,#ec4899,#facc15);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.subtitle{
+  color:#c9c9d4;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:30px;
+}
+
+.price-box{
+  background:rgba(255,255,255,.07);
+  border:1px solid #ffffff18;
+  border-radius:25px;
+  padding:30px;
+  max-width:500px;
+  margin:auto;
+  box-shadow:0 20px 60px #0008;
+}
+
+.old-price{
+  color:#888;
+  text-decoration:line-through;
+  font-size:20px;
+}
+
+.price{
+  font-size:55px;
+  font-weight:900;
+  color:#facc15;
+  margin:5px 0 15px;
+}
+
+.buy-btn{
+  display:block;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  font-size:20px;
+  padding:17px;
+  border-radius:15px;
+  background:linear-gradient(90deg,#7c3aed,#ec4899);
+  box-shadow:0 10px 30px #9333ea66;
+  margin-top:20px;
+}
+
+.buy-btn:active{
+  transform:scale(.97);
+}
+
+section{
+  padding:60px 20px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:35px;
+}
+
+.cards{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+ 
