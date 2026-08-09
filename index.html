@@ -215,7 +215,7 @@ h1{font-size:clamp(42px,8vw,78px);line-height:.95;letter-spacing:-.055em;margin:
 <footer class="footer">
   © 2026 YouTube Viral Course • Built for GitHub Pages
 </footer>
-<script>
+  <script>
 const tabs=[...document.querySelectorAll('.tab')];
 const panels=[...document.querySelectorAll('.panel')];
 function showTab(id){
@@ -224,6 +224,54 @@ function showTab(id){
   document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});
 }
 tabs.forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
+    async function submitProof() {
+  const fileInput = document.getElementById("paymentScreenshot");
+  const utrInput = document.getElementById("utr");
+  const msg = document.getElementById("proofMsg");
+
+  const utr = utrInput.value.trim();
+
+  if (!utr) {
+    msg.textContent = "Please enter UTR / Transaction ID.";
+    return;
+  }
+
+  if (!fileInput.files.length) {
+    msg.textContent = "Please upload payment screenshot.";
+    return;
+  }
+
+  msg.textContent = "Sending payment proof...";
+
+  const file = fileInput.files[0];
+
+  const reader = new FileReader();
+
+  reader.onload = async function () {
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwdNbgdnBaGwKo73-tZ0uEAQVlzEs_CHb__kU4TR7OCpFg0jqCo961pvaUqBB79NJrv/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify({
+            utr: utr,
+            screenshot: reader.result
+          })
+        }
+      );
+
+      msg.textContent = "✅ Payment proof submitted successfully!";
+    } catch (error) {
+      console.error(error);
+      msg.textContent = "❌ Submission failed. Please try again.";
+    }
+  };
+
+  reader.readAsDataURL(file);
+    }
 </script>
 
 </body>
