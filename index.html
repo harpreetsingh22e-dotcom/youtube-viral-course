@@ -241,10 +241,9 @@ tabs.forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
     return;
   }
 
-  msg.textContent = "Sending payment proof...";
+  msg.textContent = "⏳ Sending payment proof...";
 
   const file = fileInput.files[0];
-
   const reader = new FileReader();
 
   reader.onload = async function () {
@@ -263,13 +262,36 @@ tabs.forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
         }
       );
 
+      if (!response.ok) {
+        throw new Error("Server error");
+      }
+
       msg.innerHTML = `
-  <div style="margin-bottom:12px;">✅ Payment proof submitted successfully!</div>
-  <a href="https://t.me/SecurePaymentProofBot" target="_blank"
-     style="display:inline-block;padding:12px 20px;background:#229ED9;color:white;text-decoration:none;border-radius:10px;font-weight:700;">
-     🎓 JOIN COURSE
-  </a>
-`;
+        <div style="margin-top:12px;">
+          <b>✅ Payment proof submitted successfully!</b>
+          <p style="margin:8px 0;">
+            Your UTR and payment screenshot have been sent for verification.
+          </p>
+
+          <a
+            href="https://t.me/SecurePaymentProofBot"
+            target="_blank"
+            rel="noopener"
+            style="
+              display:inline-block;
+              padding:12px 20px;
+              background:#229ED9;
+              color:white;
+              text-decoration:none;
+              border-radius:10px;
+              font-weight:700;
+            "
+          >
+            🚀 JOIN COURSE
+          </a>
+        </div>
+      `;
+
     } catch (error) {
       console.error(error);
       msg.textContent = "❌ Submission failed. Please try again.";
