@@ -263,7 +263,13 @@ tabs.forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
         }
       );
 
-      msg.textContent = "✅ Payment proof submitted successfully!";
+      msg.innerHTML = `
+  <div style="margin-bottom:12px;">✅ Payment proof submitted successfully!</div>
+  <a href="https://t.me/SecurePaymentProofBot" target="_blank"
+     style="display:inline-block;padding:12px 20px;background:#229ED9;color:white;text-decoration:none;border-radius:10px;font-weight:700;">
+     🎓 JOIN COURSE
+  </a>
+`;
     } catch (error) {
       console.error(error);
       msg.textContent = "❌ Submission failed. Please try again.";
